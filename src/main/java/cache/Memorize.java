@@ -6,12 +6,12 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 import java.util.function.Function;
 
-public class Memoiz<P, V> {
+public class Memorize<P, V> {
 
     private final ConcurrentHashMap<P, FutureTask<V>> cache = new ConcurrentHashMap<>();
     private final Function<P, V> call;
 
-    public Memoiz(final Function<P, V> call) {
+    public Memorize(final Function<P, V> call) {
         this.call = call;
     }
 

@@ -3,13 +3,13 @@ package cache;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class MemoizApp {
+public class MemorizeApp {
 
     public static void main(String[] args) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
 
         // create our cached computation
-        final Memoiz<Long, String> mem = new Memoiz<>(value -> {
+        final Memorize<Long, String> mem = new Memorize<>(value -> {
             // show how much time we start thread with specific property
             System.out.println("# -> start " + value);
             try {
